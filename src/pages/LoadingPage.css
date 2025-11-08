@@ -1,0 +1,191 @@
+/* 로딩 페이지 전체 컨테이너 */
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/* 컨텐츠 래퍼 */
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* 이미지 래퍼 */
+.loading-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 로딩 이미지 */
+.loading-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 이미지 placeholder (이미지가 없을 때 표시) */
+.image-placeholder {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.placeholder-text {
+  color: #495057;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.placeholder-subtext {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* 시작하기 버튼 */
+.start-button {
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #333333;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.start-button:hover {
+  background: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.start-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 반응형 - 작은 화면 */
+@media (max-width: 480px) {
+  .loading-content {
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .loading-image-wrapper {
+    max-width: 300px;
+  }
+
+  .loading-image {
+    max-width: 300px;
+  }
+
+  .image-placeholder {
+    max-width: 300px;
+  }
+
+  .placeholder-text {
+    font-size: 18px;
+  }
+
+  .placeholder-subtext {
+    font-size: 14px;
+  }
+
+  .start-button {
+    padding: 14px 50px;
+    font-size: 18px;
+    min-width: 180px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media (max-width: 360px) {
+  .loading-content {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .loading-image-wrapper {
+    max-width: 250px;
+  }
+
+  .loading-image {
+    max-width: 250px;
+  }
+
+  .image-placeholder {
+    max-width: 250px;
+  }
+
+  .placeholder-text {
+    font-size: 16px;
+  }
+
+  .placeholder-subtext {
+    font-size: 12px;
+  }
+
+  .start-button {
+    padding: 12px 40px;
+    font-size: 16px;
+    min-width: 160px;
+  }
+}
+
+/* 가로 모드 대응 */
+@media (max-height: 600px) and (orientation: landscape) {
+  .loading-container {
+    overflow-y: auto;
+  }
+
+  .loading-content {
+    padding: 20px;
+    min-height: 100vh;
+    gap: 20px;
+  }
+
+  .loading-image-wrapper {
+    max-width: 250px;
+  }
+
+  .loading-image {
+    max-width: 250px;
+  }
+
+  .image-placeholder {
+    max-width: 250px;
+  }
+}

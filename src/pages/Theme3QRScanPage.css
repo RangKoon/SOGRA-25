@@ -1,0 +1,277 @@
+/* QR 스캔 페이지 전체 컨테이너 */
+.qr-scan-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #BCAA7B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 뒤로가기 버튼 */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.back-button:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:active {
+  transform: scale(0.95);
+}
+
+/* 전체 래퍼 */
+.qr-scan-wrapper {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  padding: 80px 0 40px;
+}
+
+/* QR 이미지 섹션 */
+.qr-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.qr-image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+/* QR 스캔 버튼 */
+.qr-scan-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background: #333333;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qr-scan-button:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.qr-scan-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 테스트용 우회 버튼 */
+.skip-qr-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.skip-qr-button:hover {
+  background: #e9ecef;
+  color: #495057;
+  border-color: #adb5bd;
+}
+
+.skip-qr-button:active {
+  transform: scale(0.98);
+}
+
+/* QR 스캐너 섹션 */
+.qr-scanner-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.scanner-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+  text-align: center;
+}
+
+#qr-reader {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cancel-scan-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.cancel-scan-button:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cancel-scan-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* 모바일 반응형 - 중간 화면 */
+@media (max-width: 480px) {
+  .qr-scan-container {
+    padding: 15px;
+  }
+
+  .back-button {
+    top: 15px;
+    left: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .qr-scan-wrapper {
+    gap: 30px;
+    padding: 60px 0 30px;
+  }
+
+  .qr-code-image {
+    max-width: 350px;
+  }
+
+  .qr-image-placeholder {
+    max-width: 350px;
+  }
+
+  .qr-scan-button {
+    max-width: 350px;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .scanner-title {
+    font-size: 20px;
+  }
+
+  .cancel-scan-button {
+    padding: 13px;
+    font-size: 15px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media (max-width: 360px) {
+  .qr-scan-container {
+    padding: 10px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .qr-scan-wrapper {
+    gap: 24px;
+    padding: 50px 0 20px;
+  }
+
+  .qr-code-image {
+    max-width: 300px;
+  }
+
+  .qr-image-placeholder {
+    max-width: 300px;
+  }
+
+  .qr-scan-button {
+    max-width: 300px;
+    padding: 14px;
+    font-size: 17px;
+  }
+
+  .scanner-title {
+    font-size: 18px;
+  }
+
+  .cancel-scan-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,203 @@
+/* 미션 완료 페이지 전체 컨테이너 */
+.mission-complete-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 뒤로가기 버튼 */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.back-button:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:active {
+  transform: scale(0.95);
+}
+
+/* 전체 래퍼 */
+.mission-complete-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  padding: 80px 0 40px;
+}
+
+/* 미션 완료 이미지 섹션 */
+.mission-complete-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-complete-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mission-image-placeholder {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+/* 다음 퀴즈 버튼 */
+.next-quiz-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background: #333333;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.next-quiz-button:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.next-quiz-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 반응형 - 중간 화면 */
+@media (max-width: 480px) {
+  .mission-complete-container {
+    padding: 15px;
+  }
+
+  .back-button {
+    top: 15px;
+    left: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .mission-complete-wrapper {
+    gap: 30px;
+    padding: 60px 0 30px;
+  }
+
+  .mission-complete-image {
+    max-width: 450px;
+  }
+
+  .mission-image-placeholder {
+    max-width: 450px;
+  }
+
+  .next-quiz-button {
+    max-width: 350px;
+    padding: 16px;
+    font-size: 18px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media (max-width: 360px) {
+  .mission-complete-container {
+    padding: 10px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .mission-complete-wrapper {
+    gap: 24px;
+    padding: 50px 0 20px;
+  }
+
+  .mission-complete-image {
+    max-width: 400px;
+  }
+
+  .mission-image-placeholder {
+    max-width: 400px;
+  }
+
+  .next-quiz-button {
+    max-width: 300px;
+    padding: 14px;
+    font-size: 17px;
+  }
+}
+
+/* 가로 모드 대응 */
+@media (max-height: 650px) and (orientation: landscape) {
+  .mission-complete-wrapper {
+    padding: 60px 0 30px;
+    gap: 30px;
+  }
+
+  .mission-complete-image {
+    max-width: 400px;
+  }
+
+  .mission-image-placeholder {
+    max-width: 400px;
+  }
+
+  .next-quiz-button {
+    padding: 14px;
+    font-size: 17px;
+  }
+}
