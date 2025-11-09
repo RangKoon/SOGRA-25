@@ -1,0 +1,22 @@
+.map-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.naver-map-container {
+  width: 80%; /* Adjust as needed */
+  height: 600px; /* Adjust as needed */
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

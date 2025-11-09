@@ -33,6 +33,9 @@ import Theme3Ep6QRScanPage from './pages/Theme3Ep6QRScanPage';
 import Theme3Ep6QuizPage from './pages/Theme3Ep6QuizPage';
 import Theme3Ep6ResultPage from './pages/Theme3Ep6ResultPage';
 import Theme3Mission6CompletePage from './pages/Theme3Mission6CompletePage';
+import MapPage from './pages/MapPage'; // Import MapPage
+import NaverMapPage from './pages/NaverMapPage'; // Import NaverMapPage
+import MissionSecurityPage from './pages/MissionSecurityPage'; // Import MissionSecurityPage
 import './App.css';
 
 function App() {
@@ -73,6 +76,9 @@ function App() {
         <Route path="/theme3/ep6/quiz" element={<Theme3Ep6QuizPage />} />
         <Route path="/theme3/ep6/result/:result" element={<Theme3Ep6ResultPage />} />
         <Route path="/theme3/mission6-complete" element={<Theme3Mission6CompletePage />} />
+        <Route path="/map" element={<MapPage />} /> {/* Add MapPage route */}
+        <Route path="/naver-map" element={<NaverMapPage />} /> {/* Add NaverMapPage route */}
+        <Route path="/mission-security" element={<MissionSecurityPage />} /> {/* Add MissionSecurityPage route */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

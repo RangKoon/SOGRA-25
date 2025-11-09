@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kakao Maps API Test</title>
+</head>
+<body>
+    <h1>Kakao Maps API 독립 테스트 페이지</h1>
+    <p>아래에 지도가 보인다면, API 키와 도메인 등록이 올바른 것입니다.</p>
+    <p>지도가 보이지 않는다면, 카카오 개발자 콘솔의 키 또는 도메인 설정에 문제가 있는 것입니다.</p>
+    <div id="map" style="width:80vw;height:60vh;"></div>
+
+    <!-- 이전에 공유해주신 API 키를 사용합니다 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e8f6b84326e544860160ee8a6bec11d0"></script>
+    <script>
+        try {
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 제주 카카오 본사
+                level: 3
+            };
+            var map = new kakao.maps.Map(container, options);
+            console.log("테스트 페이지: 지도 생성 성공!");
+        } catch (e) {
+            console.error("테스트 페이지: 지도 생성 실패!", e);
+        }
+    </script>
+</body>
+</html>

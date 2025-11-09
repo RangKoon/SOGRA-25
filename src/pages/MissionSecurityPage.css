@@ -1,0 +1,32 @@
+.mission-security-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.mission-buttons {
+  margin: 20px 0;
+}
+
+.mission-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mission-result {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left;
+  white-space: pre-wrap; /* To respect newlines in the result string */
+}
+
+.mission-result h3 {
+  margin-top: 0;
+}
